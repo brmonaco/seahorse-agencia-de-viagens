@@ -122,7 +122,7 @@ const LastMinuteOffers = ({ onSelectPackage }) => {
             <div className="offer-img">
               <img
                 src="https://images.unsplash.com/photo-1615129549504-de19ba618eee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFBvcnRvJTIwU2VndXJvJTIwQnJhc2lsfGVufDB8fDB8fHww"
-                alt="João Pessoa"
+                alt="Porto Seguro - Bahia"
               />
               <div className="offer-tag"><Timer size={14} /> Flash Sale</div>
             </div>
@@ -139,7 +139,7 @@ const LastMinuteOffers = ({ onSelectPackage }) => {
               </div>*/}
               <button
                 className="btn btn-primary btn-block"
-                onClick={() => handleSelecionarPacote('Paraíba — João Pessoa')}
+                onClick={() => handleSelecionarPacote('Porto Seguro - Bahia')}
               >
                 Quero esse pacote
               </button>
@@ -168,7 +168,7 @@ const LastMinuteOffers = ({ onSelectPackage }) => {
               </div>*/}
               <button
                 className="btn btn-primary btn-block"
-                onClick={() => handleSelecionarPacote('Resort All Inclusive — Bahamas')}
+                onClick={() => handleSelecionarPacote('Resort All Inclusive — Maldivas')}
               >
                 Quero esse pacote
               </button>

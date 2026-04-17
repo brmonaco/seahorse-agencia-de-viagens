@@ -28,13 +28,24 @@ const [lgpdAceito, setLgpdAceito] = useState(false);
     }
   }, [pacoteSelecionado]);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+const handleChange = (e) => {
+  const { name, value, type, checked } = e.target;
+  
+  // Se mudar a data de ida e a volta for anterior, limpa a volta
+  if (name === 'dataIda' && formData.dataVolta && value > formData.dataVolta) {
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? checked : value
+      dataIda: value,
+      dataVolta: '' // limpa a data de volta se ficar inválida
     });
-  };
+    return;
+  }
+
+  setFormData({
+    ...formData,
+    [name]: type === 'checkbox' ? checked : value
+  });
+};
 
 // Handler específico para o campo WhatsApp
 // Aplica a máscara antes de salvar no estado

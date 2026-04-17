@@ -29,14 +29,35 @@ const Footer = ({ onOpenPrivacy }) => {
             </ul>
           </div>
 
-          <div className="footer-contact">
-            <h3>Fale Conosco</h3>
-            <ul>
-              <li><Phone size={16} /> WhatsApp: (16) 98158-9175</li>
-              <li><Mail size={16} /> seahorseviagens@gmail.com</li>
-	{/*  <li><MapPin size={16} /> Av. Paulista, 1000 - São Paulo, SP</li> */}
-            </ul>
-          </div>
+<div className="footer-contact">
+  <h3>Fale Conosco</h3>
+  <ul>
+    {/* WhatsApp — abre conversa com mensagem pronta */}
+    <li>
+      <a href="https://wa.me/5516981589175?text=Olá%20Leandro%2C%20Quero%20Viajar!"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Phone size={16} /> (16) 98158-9175
+      </a>
+    </li>
+    {/* Email — abre o app de email */}
+    <li>
+      <a href="mailto:seahorseviagens@gmail.com">
+        <Mail size={16} /> seahorseviagens@gmail.com
+      </a>
+    </li>
+    {/* Instagram — abre o perfil */}
+    <li>
+      <a href="https://www.instagram.com/seahorseviagens/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MapPin size={16} /> @seahorseviagens
+      </a>
+    </li>
+  </ul>
+</div>
         </div>
         
 		<div className="footer-bottom">

@@ -109,3 +109,15 @@
 .footer-privacy-link:hover {
   color: white;
 }
+/* Links clicáveis no footer */
+.footer-contact ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-contact ul li a:hover {
+  color: white;
+}

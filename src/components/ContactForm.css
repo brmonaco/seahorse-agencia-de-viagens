@@ -57,7 +57,7 @@
 /* Lado direito — formulário */
 .contact-form-wrapper {
   flex: 1.2;
-  padding: 2rem 3rem 3rem 0; /* topo menor para aproximar do início do card */
+  padding: 1rem 3rem 3rem 0; /* topo menor para aproximar do início do card */
 }
 
 /* Grupos de campo */
@@ -253,7 +253,7 @@ input:checked + .slider:before {
   }
 
   .contact-form-wrapper {
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
   }
 }
 
@@ -265,11 +265,25 @@ input:checked + .slider:before {
   }
 
   .contact-info {
-    padding: 2.5rem 2rem;
+    padding: 1.5rem; /* reduz padding do bloco navy no mobile */
+  }
+
+  .contact-info h2 {
+    font-size: 1.6rem; /* título menor no mobile */
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-info p {
+    margin-bottom: 0; /* remove espaço abaixo do texto */
+    font-size: 0.9rem;
+  }
+
+  .contact-image {
+    display: none; /* esconde a imagem de fundo no mobile — libera espaço */
   }
 
   .contact-form-wrapper {
-    padding: 1.5rem;
+    padding: 1rem 1.2rem 1.5rem; /* reduz padding do formulário */
   }
 }
 /* Checkbox LGPD */

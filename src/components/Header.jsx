@@ -15,17 +15,25 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setMobileMenuOpen(false);
-      }
-    };
-    if (mobileMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    // Só fecha se clicar fora do nav E fora do botão hamburguer
+    if (
+      navRef.current &&
+      !navRef.current.contains(e.target) &&
+      !e.target.closest('.mobile-menu-btn')
+    ) {
+      setMobileMenuOpen(false);
     }
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [mobileMenuOpen]);
+  };
+  if (mobileMenuOpen) {
+    // Pequeno delay para não capturar o clique que abriu o menu
+    setTimeout(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+    }, 100);
+  }
+  return () => document.removeEventListener('mousedown', handleClickOutside);
+}, [mobileMenuOpen]);
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
