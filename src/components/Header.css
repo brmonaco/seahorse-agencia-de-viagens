@@ -130,11 +130,11 @@
   }
 
   .header:not(.scrolled) .logo-image {
-    transform: scale(1.2); /* reduz o scale gigante que empurrava o texto */
+    transform: scale(1.5); /* reduz o scale gigante que empurrava o texto */
     transform-origin: left center; /* ancora à esquerda */
   }
 
   .logo-image {
-    height: 50px; /* menor no mobile */
+    height: 65px; /* menor no mobile */
   }
 }
