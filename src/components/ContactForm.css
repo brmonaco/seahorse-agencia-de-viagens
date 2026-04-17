@@ -270,7 +270,6 @@ input:checked + .slider:before {
 
   .contact-form-wrapper {
     padding: 1.5rem;
-	margin-top: -2rem; /* puxa o formulário para cima */
   }
 }
 /* Checkbox LGPD */
