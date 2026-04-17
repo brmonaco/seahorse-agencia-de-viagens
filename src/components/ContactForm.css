@@ -269,7 +269,7 @@ input:checked + .slider:before {
   }
 
   .contact-form-wrapper {
-    padding: 1.5rem;
+	padding: 0 1.5rem 1.5rem; /* zero no topo remove o espaço sem mexer na imagem */
   }
 }
 /* Checkbox LGPD */
