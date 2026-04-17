@@ -265,25 +265,11 @@ input:checked + .slider:before {
   }
 
   .contact-info {
-    padding: 1.5rem; /* reduz padding do bloco navy no mobile */
-  }
-
-  .contact-info h2 {
-    font-size: 1.6rem; /* título menor no mobile */
-    margin-bottom: 0.5rem;
-  }
-
-  .contact-info p {
-    margin-bottom: 0; /* remove espaço abaixo do texto */
-    font-size: 0.9rem;
-  }
-
-  .contact-image {
-    display: none; /* esconde a imagem de fundo no mobile — libera espaço */
+    padding: 2.5rem 2rem;
   }
 
   .contact-form-wrapper {
-    padding: 1rem 1.2rem 1.5rem; /* reduz padding do formulário */
+    padding: 1.5rem;
   }
 }
 /* Checkbox LGPD */
