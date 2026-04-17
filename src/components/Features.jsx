@@ -1,35 +1,35 @@
-import { Clock, Briefcase, Tag, Compass, Coffee, ShieldCheck } from 'lucide-react';
+import { Clock, Plane, Tag, Users, MapPinned  , ShieldCheck } from 'lucide-react';
 import './Features.css';
 
 const Features = () => {
   const features = [
     {
-      icon: <Clock size={32} />,
-      title: 'Atendimento 24h',
+      icon: <Clock size={40} />,
+      title: 'Atendimento 24h Personalizado',
       desc: 'Suporte integral antes, durante e depois da sua viagem.'
     },
     {
-      icon: <Briefcase size={32} />,
-      title: 'Pacotes Personalizados',
+      icon: <Plane size={40} />,
+      title: 'Pacotes Personalizados e Inteligentes',
       desc: 'Sua viagem desenhada sob medida para seus desejos.'
     },
     {
-      icon: <Tag size={32} />,
+      icon: <Tag size={40} />,
       title: 'Melhor Preço Garantido',
       desc: 'Negociamos direto com parceiros para o melhor custo-benefício.'
     },
     {
-      icon: <Compass size={32} />,
-      title: 'Experiências Únicas',
+      icon: <MapPinned size={40} />,
+      title: 'Experiências Únicas e Imersivas',
       desc: 'Acesso a roteiros exclusivos e destinos inexplorados.'
     },
     {
-      icon: <Coffee size={32} />,
-      title: 'Roteiros Gastronômicos Exclusivos',
-      desc: 'Descubra os sabores autênticos através de reservas premium e dicas secretas de chefs locais.'
+      icon: <Users   size={40} />,
+      title: 'Consultores Especializados',
+      desc: 'Conte com consultores experientes que entendem seu perfil e montam roteiros com mais segurança, praticidade e atenção a cada detalhe da sua viagem'
     },
     {
-      icon: <ShieldCheck size={32} />,
+      icon: <ShieldCheck size={40} />,
       title: 'Seguro Viagem Completo',
       desc: 'Viaje com absoluta tranquilidade com nossas apólices de seguro médico e bagagem de primeira linha.'
     }

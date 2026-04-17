@@ -1,0 +1,20 @@
+{
+  "_instrucoes": {
+    "como_usar": "Este arquivo controla o contador de ofertas e é lido pelo site em tempo real. Edite toda semana antes de trocar os pacotes.",
+    "passo_a_passo": [
+      "1. Abra este arquivo (ofertas.json) no Notepad++",
+      "2. Altere o campo 'dataExpiracao' para o próximo domingo às 23:59:59 no formato: AAAA-MM-DDTHH:MM:SS",
+      "3. Exemplo: se hoje é domingo 20/07, coloque '2025-07-27T23:59:59'",
+      "4. Salve este arquivo",
+      "5. Para alterar os PACOTES, abra: src/components/LastMinuteOffers.jsx no Notepad++",
+      "6. Procure o comentário /* Card 1 - Nacional */ para o pacote nacional",
+      "7. Procure o comentário /* Card 2 - Internacional */ para o pacote internacional",
+      "8. Em cada card, altere: o src da imagem, o h3 (nome do destino), o p (descrição), price-old e price-new",
+      "9. Salve o LastMinuteOffers.jsx",
+      "10. Faça o deploy no Vercel: abra o terminal na pasta do projeto e digite: git add . && git commit -m 'Novos pacotes semana' && git push"
+    ],
+    "formato_data": "AAAA-MM-DDTHH:MM:SS — sempre domingo às 23:59:59",
+    "exemplo_data": "2025-07-27T23:59:59"
+  },
+  "dataExpiracao": "2026-04-24T14:15:59"
+}

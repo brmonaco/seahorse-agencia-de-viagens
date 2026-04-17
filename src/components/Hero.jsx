@@ -9,7 +9,7 @@ const Hero = () => {
           Descubra o Paraíso que Você Merece
         </h1>
         <p className="hero-subtitle fade-in-section is-visible" style={{transitionDelay: '0.2s'}}>
-          Experiências premium no Caribe e ao redor do mundo. Sua jornada inesquecível começa com a SeaHorse.
+          Experiências premium no Caribe e ao redor do mundo.<br />Sua Viagem dos Sonhos começa com a SeaHorse.
         </p>
         <div className="hero-buttons fade-in-section is-visible" style={{transitionDelay: '0.4s'}}>
           <a href="#destinos" className="btn btn-primary">Explorar Destinos</a>

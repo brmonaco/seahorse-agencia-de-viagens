@@ -1,18 +1,13 @@
 .offers {
   background-color: var(--color-navy);
   color: white;
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 
-.offers-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.offers-content {
-  flex: 1;
+/* Cabeçalho da seção — título, texto e contador centralizados */
+.offers-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .badge-highlight {
@@ -27,22 +22,25 @@
   margin-bottom: 1rem;
 }
 
-.offers-content h2 {
+.offers-header h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: white;
 }
 
-.offers-content p {
+.offers-header p {
   font-size: 1.1rem;
   opacity: 0.8;
   margin-bottom: 2.5rem;
 }
 
+/* Contador centralizado */
 .countdown {
   display: flex;
   align-items: flex-start;
+  justify-content: center; /* centraliza o contador */
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .countdown-item {
@@ -53,6 +51,7 @@
   padding: 1rem 1.5rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 90px; /* largura mínima para não tremer ao mudar número */
 }
 
 .countdown .time {
@@ -74,18 +73,25 @@
 .countdown-separator {
   font-size: 3rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   margin-top: 0.5rem;
+}
+
+/* Cards lado a lado com espaçamento */
+.offers-cards {
+  display: flex;
+  gap: 2rem; /* espaço entre os cards */
+  justify-content: center;
 }
 
 .offer-card {
   flex: 1;
-  max-width: 500px;
+  max-width: 480px;
   background: white;
   border-radius: 16px;
   overflow: hidden;
   color: var(--color-navy);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .offer-img {
@@ -159,19 +165,45 @@
   display: block;
   text-align: center;
   width: 100%;
+  border: none;
+  cursor: pointer;
 }
 
+/* Responsivo — empilha no mobile */
 @media (max-width: 992px) {
-  .offers-wrapper {
-    flex-direction: column;
-  }
-  .offers-content h2 {
+  .offers-header h2 {
     font-size: 2.5rem;
   }
-  .countdown .time {
-    font-size: 2rem;
+
+  .offers-cards {
+    flex-direction: column;
+    align-items: center;
   }
+
   .offer-card {
     width: 100%;
+    max-width: 500px;
   }
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    gap: 0.5rem;
+  }
+
+  .countdown-item {
+    padding: 0.8rem 1rem;
+    min-width: 70px;
+  }
+
+  .countdown .time {
+    font-size: 1.8rem;
+  }
+
+  .countdown-separator {
+    font-size: 1.8rem;
+  }
+}
+#pacotes {
+  scroll-margin-top: 70px;
 }

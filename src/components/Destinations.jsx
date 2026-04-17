@@ -2,18 +2,45 @@ import './Destinations.css';
 import { MapPin } from 'lucide-react';
 
 const destinations = [
-  { id: 1, name: 'Curaçao', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80', description: 'Águas cristalinas e arquitetura holandesa vibrante.' },
-  { id: 2, name: 'Miami', image: 'https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?auto=format&fit=crop&w=800&q=80', description: 'Vida noturna agitada e praias de areia branca paradisíacas.' },
-  { id: 3, name: 'Fernando de Noronha', image: 'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=800&q=80', description: 'Santuário ecológico inesquecível no Brasil.' },
-  { id: 4, name: 'Costa Rica', image: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=800&q=80', description: 'Biodiversidade pura, vulcões majestosos e selvas exuberantes.' },
-  { id: 5, name: 'Grécia', image: 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80', description: 'Por do sol romântico, história antiga e mar Egeu deslumbrante.' },
-  { id: 6, name: 'Tailândia', image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=800&q=80', description: 'Templos sagrados e as ilhas tropicais mais deslumbrantes da Ásia.' },
-  { id: 7, name: 'Ushuaia', image: '/ushuaia.png', description: 'Passeios na Neve e Natureza extremamente preservada.' },
-  { id: 8, name: 'São Carlos', image: '/saocarlos.png', description: 'A cidade conhecida como a Capital da Tecnologia.' },
-  { id: 9, name: 'Ibirité', image: '/ibirite.png', description: 'Turismo ecológico, com vistas panorâmicas na Serra do Rola Moça, cultura e religiosidade.' },
+  { 
+    id: 1, 
+    name: 'Curaçao', 
+    image: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80', 
+    description: 'Águas cristalinas e arquitetura holandesa vibrante no Caribe.' 
+  },
+  { 
+    id: 2, 
+    name: 'Disney', 
+    image: 'https://images.unsplash.com/photo-1634221558053-3a617b5201d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG9ybGFuZG8lMjBmbG9yaWRhfGVufDB8fDB8fHww', 
+    description: 'A magia do mundo Disney esperando por você e sua família.' 
+  },
+  { 
+    id: 3, 
+    name: 'Paris', 
+    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80', 
+    description: 'A cidade luz com a Torre Eiffel, gastronomia e romance.' 
+  },
+  { 
+    id: 4, 
+    name: 'Maceió', 
+    image: 'https://images.unsplash.com/photo-1587571594954-272f8cc473d0?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+    description: 'Piscinas naturais e praias de água verde esmeralda no Nordeste.' 
+  },
+  { 
+    id: 5, 
+    name: 'Natal', 
+    image: 'https://images.unsplash.com/photo-1515898034510-821b204966e4?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+    description: 'Dunas douradas, lagoas e o melhor litoral do Rio Grande do Norte.' 
+  },
+  { 
+    id: 6, 
+    name: 'Gramado', 
+    image: 'https://images.unsplash.com/photo-1752434379738-8ac3634fa230?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fENpZGFkZSUyMGRlJTIwZ3JhbWFkb3xlbnwwfHwwfHx8MA%3D%3D', 
+    description: 'Clima europeu, chocolate artesanal e charme gaúcho na Serra.' 
+  },
 ];
 
-const Destinations = () => {
+const Destinations = ({ onSelectDestino }) => {
   return (
     <section id="destinos" className="section destinations">
       <div className="container">
@@ -35,7 +62,15 @@ const Destinations = () => {
               <div className="destination-content">
                 <h3><MapPin size={18} className="icon-pin" /> {dest.name}</h3>
                 <p>{dest.description}</p>
-                <a href="#contato" className="link-arrow">Ver pacotes &rarr;</a>
+                <button
+					className="link-arrow"
+					onClick={() => {
+						onSelectDestino(dest.name); // envia o nome do destino para o App.jsx
+						document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+					}}
+				>
+					Consultar Pacotes →
+				</button>
               </div>
             </div>
           ))}

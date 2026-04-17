@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+/* Corrige o scroll de todas as seções por causa do header fixo */
+section[id],
+div[id] {
+  scroll-margin-top: 80px;
+}

@@ -1,6 +1,8 @@
 .contact {
   background-color: var(--color-pearl);
   padding-bottom: 8rem;
+  padding-top: 0rem; /* reduz o espaço acima do título */
+  padding-bottom: 3rem; /* ← adiciona essa linha */
 }
 
 .contact-container {
@@ -12,9 +14,10 @@
   box-shadow: 0 20px 50px rgba(0,0,0,0.05);
 }
 
+/* Lado esquerdo — navy com imagem */
 .contact-info {
   flex: 1;
-  padding: 4rem;
+  padding: 3rem;           /* era 4rem, reduzi para aproximar o topo */
   background-color: var(--color-navy);
   color: white;
   position: relative;
@@ -23,17 +26,17 @@
 
 .contact-info h2 {
   font-size: 2.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 10;
 }
 
 .contact-info p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: 0.9;
   position: relative;
   z-index: 10;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .contact-image {
@@ -51,18 +54,20 @@
   opacity: 0.5;
 }
 
+/* Lado direito — formulário */
 .contact-form-wrapper {
   flex: 1.2;
-  padding: 4rem 4rem 4rem 0;
+  padding: 2rem 3rem 3rem 0; /* topo menor para aproximar do início do card */
 }
 
+/* Grupos de campo */
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* era 1.5rem — reduzido para compactar */
 }
 
 .form-row {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .form-row .form-group {
@@ -71,20 +76,21 @@
 
 .form-group label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-navy);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem; /* era 0.5rem */
 }
 
 .form-group input {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 1rem; /* era 0.8rem */
   border: 1px solid #ddd;
   border-radius: 8px;
   font-family: var(--font-body);
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .form-group input:focus {
@@ -93,15 +99,17 @@
   box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
 }
 
-/* Toggle Switch */
+/* Toggle datas flexíveis — colado logo abaixo das datas */
 .toggle-group {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 2rem;
+  margin-top: 0;       /* remove espaço extra acima */
+  margin-bottom: 1rem;
 }
 
 .toggle-group span {
+  font-size: 0.9rem;
   font-weight: 500;
   color: #555;
 }
@@ -111,6 +119,7 @@
   display: inline-block;
   width: 50px;
   height: 26px;
+  flex-shrink: 0; /* não encolhe no mobile */
 }
 
 .toggle-switch input {
@@ -122,10 +131,7 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-color: #ccc;
   transition: .4s;
   border-radius: 34px;
@@ -151,30 +157,161 @@ input:checked + .slider:before {
   transform: translateX(24px);
 }
 
+/* Passageiros — bloco fixo com 3 linhas */
+.passageiros-fixo {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* arredonda as bordas das linhas internas */
+}
+
+.passageiro-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+}
+
+/* Remove borda da última linha */
+.passageiro-linha:last-child {
+  border-bottom: none;
+}
+
+.passageiro-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.passageiro-titulo {
+  font-weight: 600;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+}
+
+.passageiro-desc {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 1px;
+}
+
+/* Controles + número + - */
+.passageiro-controle {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-contador {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+  transition: all 0.2s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.btn-contador:hover:not(:disabled) {
+  border-color: var(--color-turquoise);
+  color: var(--color-turquoise);
+  background: rgba(0, 128, 128, 0.05);
+}
+
+.btn-contador:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.contador-valor {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Botão enviar */
 .submit-btn {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   width: 100%;
   padding: 1rem;
   font-size: 1.1rem;
 }
 
+/* Responsivo tablet */
 @media (max-width: 992px) {
   .contact-container {
     flex-direction: column;
   }
+
   .contact-form-wrapper {
-    padding: 3rem;
+    padding: 2rem;
   }
 }
+
+/* Responsivo mobile */
 @media (max-width: 576px) {
   .form-row {
     flex-direction: column;
     gap: 0;
   }
+
   .contact-info {
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
   }
+
   .contact-form-wrapper {
-    padding: 2rem;
+    padding: 1.5rem;
   }
+}
+/* Checkbox LGPD */
+.lgpd-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lgpd-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;   /* não encolhe no mobile */
+  cursor: pointer;
+  accent-color: var(--color-turquoise);
+}
+
+.lgpd-group label {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.lgpd-link {
+  background: none;
+  border: none;
+  color: var(--color-turquoise);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.lgpd-link:hover {
+  color: var(--color-navy);
+}
+#contato {
+  scroll-margin-top: 70px; /* empurra o ponto de parada para baixo do header fixo */
 }

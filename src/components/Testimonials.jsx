@@ -22,6 +22,13 @@ const testimonials = [
     location: "Belo Horizonte, MG",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     text: "Melhores preços e experiências exclusivas. Consegui um pacote para Punta Cana com um custo-benefício que não encontrei em nenhum outro lugar."
+  },
+  {
+    id: 4,
+    name: "Beatriz Machado",
+    location: "Miami, FL, EUA",
+    image: "https://images.unsplash.com/photo-1542596594-649edbc13630?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVsaGVyJTIwZmVsaXp8ZW58MHx8MHx8fDA%3D",
+    text: "Estava buscando visitar lugares paradisíacos no Brasil e com a assistência da SeaHorse foi possível desde o planejamento até meu retorno para casa."
   }
 ];
 

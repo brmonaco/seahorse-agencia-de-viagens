@@ -1,6 +1,8 @@
 .testimonials {
   background-color: var(--color-pearl);
   position: relative;
+  padding-top: 2rem; /* reduz o espaço acima do título */
+  padding-bottom: 3rem; /* ← adiciona essa linha */
 }
 
 .testimonials::before {
@@ -26,13 +28,13 @@
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
 }
 
 .testimonial-card {
   background: white;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   transition: transform 0.4s ease;
@@ -79,4 +81,7 @@
 .author-info span {
   font-size: 0.85rem;
   color: #888;
+}
+#avaliacoes {
+  scroll-margin-top: 70px;
 }
